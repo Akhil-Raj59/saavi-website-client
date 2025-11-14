@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { articlesAPI } from "../services/api";
 import ArticleCard from "../components/ArticleCard";
-
 export default function Articles() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);

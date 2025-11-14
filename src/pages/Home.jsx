@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import { articlesAPI, eventsAPI, testimonialsAPI } from "../services/api";
-import ArticleCard from "../components/articleCard";
-import EventCard from "../components/eventCard";
+import ArticleCard from "../components/ArticleCard";
+import EventCard from "../components/EventCard";
 import TestimonialCard from "../components/testimonalCard";
 
 export default function Home() {
