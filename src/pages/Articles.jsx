@@ -1,7 +1,7 @@
 // src/pages/Articles.jsx
 import React, { useEffect, useState } from "react";
 import { articlesAPI } from "../services/api";
-import ArticleCard from "../components/articleCard";
+import ArticleCard from "../components/ArticleCard";
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
