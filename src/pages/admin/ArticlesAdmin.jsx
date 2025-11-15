@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import AdminSidebar from "../../components/admin/AdminSidebar";
 import AdminHeader from "../../components/admin/AdminHeader";
-import DataTable from "../../components/admin/AdminDatatable";
+import DataTable from "../../components/admin/AdminDataTable";
 import { articlesAPI } from "../../services/api";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
