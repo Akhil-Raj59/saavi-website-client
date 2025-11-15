@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import { articlesAPI, eventsAPI, testimonialsAPI } from "../services/api";
 import ArticleCard from "../components/ArticleCard";
 import EventCard from "../components/EventCard";
-import TestimonialCard from "../components/testimonalCard";
+import TestimonialCard from "../components/TestimonalCard"
 
 export default function Home() {
   const [featuredArticles, setFeaturedArticles] = useState([]);
