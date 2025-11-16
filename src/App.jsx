@@ -21,7 +21,7 @@ import Login from "./pages/login";
 // Admin Utilities
 import AdminRoute from "./components/AdminRoutes";
 
-// Admin Pagess
+// Admin Pages
 import AdminDashboardPage from "./pages/admin/AdminDashboard.jsx";
 import EventsAdmin from "./pages/admin/EventsAdmin";
 import EventsEdit from "./pages/admin/EventsEdit";
@@ -34,17 +34,21 @@ import UsersAdmin from "./pages/admin/UsersAdmin";
 import CreateEventAdmin from "./pages/admin/CreateEventAdmin";
 import CreateTestimonialAdmin from "./pages/admin/CreateTestimonialAdmin";
 import ArticlesCreate from "./pages/admin/CreateArticle";
+import ContactSection from "./components/home/ContactSection";
+import { AboutSection } from "./components/home/AboutSection";
+import ServicesSection from "./components/home/ServicesSection.jsx";
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col bg-gray-50">
-          {/* Header for public site */}
+        {/* Dark theme wrapper - applies to entire app */}
+        <div className="min-h-screen flex flex-col bg-black text-white">
+          {/* Header for public site (Fixed at top) */}
           <Header />
 
-          {/* Main Content */}
-          <div className="flex-1">
+          {/* Main Content with padding-top for fixed header */}
+          <main className="flex-1 pt-20">
             <Routes>
               {/* ----- Public Routes ----- */}
               <Route path="/" element={<Home />} />
@@ -52,8 +56,9 @@ export default function App() {
               <Route path="/articles/:slug" element={<ArticleDetail />} />
               <Route path="/events" element={<Events />} />
               <Route path="/events/:slug" element={<EventDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<ContactSection/>} />
+              <Route path="/about" element={<AboutSection />} />
+              <Route path="/services" element={<ServicesSection />} />
               <Route path="/login" element={<Login />} />
 
               {/* ----- Admin Routes (Protected) ----- */}
@@ -101,7 +106,7 @@ export default function App() {
                 path="/admin/articles/create"
                 element={
                   <AdminRoute>
-                    <ArticlesCreate/>                  
+                    <ArticlesCreate />
                   </AdminRoute>
                 }
               />
@@ -154,13 +159,13 @@ export default function App() {
                 }
               />
             </Routes>
-          </div>
+          </main>
 
           {/* Footer for public site */}
           <Footer />
         </div>
 
-        {/* Floating Chat Button */}
+        {/* Floating Chat Button (outside main flow) */}
         <ChatButton />
       </BrowserRouter>
     </AuthProvider>
