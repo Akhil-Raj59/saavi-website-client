@@ -13,7 +13,24 @@ const courses = [
       { label: "Session Framework", file: "/pdfs/beyond_framework.pdf" },
     ],
   },
-  
+  {
+    title: "Applied LLM",
+    files: [
+      { label: "Course Brochure", file: "/pdfs/beyond_course.pdf" },
+      { label: "Business Proposal", file: "/pdfs/beyond_proposal.pdf" },
+      { label: "Pre & Pro Assessment", file: "/pdfs/beyond_assessment.pdf" },
+      { label: "Session Framework", file: "/pdfs/beyond_framework.pdf" },
+    ],
+  },
+  {
+    title: "Enterprise LLM Security",
+    files: [
+      { label: "Course Brochure", file: "/pdfs/beyond_course.pdf" },
+      { label: "Business Proposal", file: "/pdfs/beyond_proposal.pdf" },
+      { label: "Pre & Pro Assessment", file: "/pdfs/beyond_assessment.pdf" },
+      { label: "Session Framework", file: "/pdfs/beyond_framework.pdf" },
+    ],
+  },
 ];
 
 export default function UpSkill() {
